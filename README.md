@@ -1,4 +1,7 @@
 # EncodingConverter
+[![Github All Releases](https://img.shields.io/github/downloads/dennis97519/EncodingConverter/total.svg)](https://github.com/dennis97519/EncodingConverter/releases)
+[![Build status](https://ci.appveyor.com/api/projects/status/ih86toh7q9c59efj?svg=true)](https://ci.appveyor.com/project/dennis97519/encodingconverter)
+
 Convert garbled file name encoding to UTF(16? anyway the encoding used for NTFS)
 
 E.g. after extracting some Japanese app or game's zip you see unreadable text, because the file name are stored as Shift JIS on disk but is interpreted by Windows as some other encoding.
@@ -11,9 +14,7 @@ The folder path input box doesn't update the tree view. It only provides input t
 
 If you are sure about the actual encoding, try changing the system encoding. The author of the archive may have another default encoding on the system that further garbles things up. I've got a zip with file names that are SJIS reinterpreted as Code Page 850, and probably stored as UTF16.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ih86toh7q9c59efj?svg=true)](https://ci.appveyor.com/project/dennis97519/encodingconverter)
 
-[Binary Releases Download](https://github.com/dennis97519/EncodingConverter/releases)
 
 ### Features I would like to add:
 - [Show root folder somehow](https://forum.qt.io/topic/74756/show-root-path-in-qtreeview-for-qfilesystemmodel/9) in the treeview
