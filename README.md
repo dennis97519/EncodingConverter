@@ -14,7 +14,14 @@ The folder path input box doesn't update the tree view. It only provides input t
 
 If you are sure about the actual encoding, try changing the system encoding. The author of the archive may have another default encoding on the system that further garbles things up. I've got a zip with file names that are SJIS reinterpreted as Code Page 850, and probably stored as UTF16.
 
+## Usage
+![encconv](https://user-images.githubusercontent.com/4066022/37687106-468dd94c-2c68-11e8-8cc2-4a487c7b3759.PNG)
 
+1. Download the zip
+2. (extract and) open EncodingConverter.exe. If missing dll, run the vcredist installer in the zip.
+3. Browse to the folder with encoding problems
+4. Select the correct encoding
+5. Apply
 
 ### Features I would like to add:
 - [Show root folder somehow](https://forum.qt.io/topic/74756/show-root-path-in-qtreeview-for-qfilesystemmodel/9) in the treeview
