@@ -18,16 +18,21 @@ MainWindow::MainWindow(QWidget *parent) :
     QStringList codeclist;
 
     int systemindex=-1;
+    int latin1index=-1;//mac doesn't have the system codec option
     int sjisindex=-1;
     for(int i=0;i<codecs.length();i++){
         QByteArray currcodec=codecs.at(i);
         codeclist.push_back(currcodec);
         if(currcodec=="System")systemindex=i;
+        if(currcodec=="latin1")latin1index=i;
         if(currcodec=="Shift_JIS")sjisindex=i;
     }
     ui->cmboEnc->addItems(codeclist);
     ui->cmboSysEnc->addItems(codeclist);
+    //set system codec index
     if(systemindex!=-1)ui->cmboSysEnc->setCurrentIndex(systemindex);
+    else if(latin1index!=-1)ui->cmboSysEnc->setCurrentIndex(latin1index);
+    //set target index
     if(sjisindex!=-1)ui->cmboEnc->setCurrentIndex(sjisindex);
 }
 
