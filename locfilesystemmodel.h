@@ -4,6 +4,9 @@
 #include <QFileSystemModel>
 #include <QTextCodec>
 #include <string>
+/*!
+ * \brief The LocFileSystemModel class overrides some of the default functions in QFileSystemModel to provide encoding conversion functionalities
+ */
 class LocFileSystemModel : public QFileSystemModel
 {
 public:

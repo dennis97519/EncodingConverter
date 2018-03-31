@@ -34,3 +34,5 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+DEFINES += QT_NO_FILESYSTEMWATCHER
