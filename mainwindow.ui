@@ -39,7 +39,7 @@
       <item row="2" column="1">
        <widget class="QComboBox" name="cmboEnc">
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::StrongFocus</enum>
         </property>
        </widget>
       </item>
@@ -77,7 +77,7 @@
       <item row="1" column="1">
        <widget class="QComboBox" name="cmboSysEnc">
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::StrongFocus</enum>
         </property>
        </widget>
       </item>
@@ -88,6 +88,14 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>treePreview</tabstop>
+  <tabstop>txtFolder</tabstop>
+  <tabstop>btnBrowse</tabstop>
+  <tabstop>cmboSysEnc</tabstop>
+  <tabstop>cmboEnc</tabstop>
+  <tabstop>btnApply</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
