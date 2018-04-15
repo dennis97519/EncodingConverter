@@ -16,6 +16,13 @@ QVariant LocFileSystemModel::data(const QModelIndex &index, int role) const{
     //did I want to add some other check here?
     if(role==Qt::DisplayRole&&codec&&systemcodec){
         QByteArray str=systemcodec->fromUnicode(dat.toString());
+        QByteArray cname=systemcodec->name();
+        if(cname=="UTF-16"||cname=="UTF-16LE"||cname=="UTF-16BE"){
+            str.remove(0,2);//remove byte order mark
+        }
+        else if(cname=="UTF-32"||cname=="UTF-32LE"||cname=="UTF-32BE"){
+            str.remove(0,4);//remove byte order mark
+        }
         dat=QVariant(codec->toUnicode(str));
     }
     return dat;
