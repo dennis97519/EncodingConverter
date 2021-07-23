@@ -27,3 +27,13 @@ If you are sure about the actual encoding, try changing the system encoding. The
 - [Show root folder somehow](https://forum.qt.io/topic/74756/show-root-path-in-qtreeview-for-qfilesystemmodel/9) in the treeview
 - Add [checkboxes](https://stackoverflow.com/questions/26125363/how-to-add-checkbox-on-qtreeview-qfilesystemmodel) to treeview so some files and folders can be skipped 
 - Convert encoding of plain text files at the same time (toogle via another checkbox)
+
+## Issues I'm seeing affecting the utility of this app
+- Qt's encoding conversion is buggy
+- Qt's tree view thing is buggy and locks folders
+- Some information could still be destroyed during extraction with a wrong encoding
+- Many of the executables with the local filename encoding also have the strings in the resources section encoded the same way, and it is difficult to look for and correct that
+
+## Alternatives
+- [Locale Emulator](https://xupefei.github.io/Locale-Emulator/) for running the executables
+- Bandizip for extracting (has options for encoding of the files within its archive explorer)
